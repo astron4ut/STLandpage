@@ -1,18 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stranger Things</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stranger Things</title>
 </head>
 <body>
-    <header>
-        <audio id="normal-world-audio" src="./assets/musics/normal-world.mpeg"></audio>
+  <header>
+    <audio id="music">
+      <source src="./assets/musics/normal-world.mpeg">
+    </audio>
 
-        <div>
-            
+    <div class="header-content">
+      <img class="inverted-element" 
+        src="./assets/images/banner/logo.svg" 
+        alt="Main Image">
+        <p class="invert-element" role="text">
+          A journey for those who are not afraid of the unknown. The way to the world
+          Inverted is uncertain, fraught with obstacles and dangers. However, the payoff is great:
+          save Hawkings and the world from Vecna's clutches. Are you prepared? then click
+          click the button below to join this adventure!
+        </p>
+        <button id="switch-theme-button" onclick="switchTheme()">Invert Worlds</button>
         </div>
-    </header>
+  </header>
+    
+   <main>
+    <section>
+      <div class="section-texts">
+        <h1>Inverted World</h1>
+          <p role="text">
+            The Upside Down is an alternate dimension of our world,
+            but inhabited by hideous creatures, frightening storms,
+            filled with darkness, evil entities and beings.</p>
+      </div>
+        <img class="invert-element" 
+              src="./assets/images/content/inverted-world.png" 
+              alt="Inverted World image">
+    </section>
+    
+    <section id="section-stranger-things-trailer" class="container">
+      <div class="video-frame" aria-hidden="true">
+        <iframe 
+        width="560" 
+        height="315" 
+        src="https://www.youtube.com/embed/yTX0HxTq9wo?start=10" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen></iframe>
+      </div>
+      <div class="section-texts">
+        <h2>Stranger Things Vol. 4</h2>
+        <p role="text">
+          More experienced, the heroes of Stranger Things must face challenges
+          bigger than ever and make decisions that will change their lives forever.
+          Check out a cut from the upcoming season!
+        </p>
+      </div>
+    </section>
+
+    <section id="section-stranger-things-gallery">
+      <div class="container section-text">
+        <h2>The most watched series on Netflix.</h2>
+        <ul class="gallery-container" role="gallery">
+          <li class="gallery-image invert-element">
+            <img src="./assets/images/content/serie-image-01.png" alt="Vecna image">
+          </li>
+          <li class="gallery-image invert-element">
+            <img src="./assets/images/content/serie-image-02.png" alt="Illustrative image">
+          </li>
+          <li class="gallery-image invert-element">
+            <img src="./assets/images/content/serie-image-03.png" alt="Eleven image">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+
+    </section>
+  </main>
 </body>
 </html>
