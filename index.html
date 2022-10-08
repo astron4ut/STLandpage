@@ -5,7 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stranger Things</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
   <header>
     <audio id="music">
@@ -24,9 +26,13 @@
         </p>
         <button id="switch-theme-button" onclick="switchTheme()">Invert Worlds</button>
         </div>
+        
+        <div id="top-characters" class="world-characters"></div>
   </header>
     
    <main>
+    <div id="botton-characters" class="world-characters"></div>
+
     <section>
       <div class="section-texts">
         <h1>Inverted World</h1>
@@ -78,8 +84,36 @@
       </div>
     </section>
 
-    <section>
+    <section id="section-form" class="container">
+      <h2>Dungeons & Dragons Club</h2>
+      <p>
+        To stop Vecna, the heroes of Stranger Things need you. 
+        Hawkings' most famous D&D club has spots open for your next adventure. 
+        If you're fearless, you like challenges and you're not afraid to run the D20, 
+        it's time to sign up to be part of the new campaign.
+      </p>
+      
+      <div>
+        <h3>Join the D&D club and experience <span>out of this world</span></h3>
 
+        <div class="form-container">
+          <form>
+            <label for="txtName">Name</label>
+            <input type="text" name="name" id="txtName">
+
+            <label for="txtEmail">Email</label>
+            <input type="email" name="email" id="txtEmail">
+
+            <label for="txtLevel">Level</label>
+            <input type="text" name="level" id="txtLevel">
+
+            <label for="txtCharacter">Character</label>
+            <textarea name="character" id="textCharacter" cols="30" rows="10"></textarea>
+
+            <button type="button" id="buttonSubscribe">Subscribe</button>
+          </form>        
+        </div>
+      </div>
     </section>
   </main>
 </body>
