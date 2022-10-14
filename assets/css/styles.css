@@ -19,11 +19,11 @@
     );
     --header-background-color: #e3e3e3;
     --highlight-color: #000000;
-    --featured-font-family: "Archivo", sans-serif;
-    --character-top-image-src: url("../images/characters/kids-on-the-bike.svg");
+    --featured-font-family: "Rubik", sans-serif;
+    --character-top-image-src: url("../images/characters/kids-on-the-bike.png");
     --character-top-image-color: #ffffff;
-    --character-bottom-image-src: url("../images/characters/inverted-world-monster.svg");
-    --character-bottom-image-color: #e5e5e5;
+    --character-bottom-image-src: url("../images/characters/inverted-world-monster.png");
+    --character-bottom-image-color: #ffffff;
     --background-lamp-image: url("../images/backgrounds/lamps.png");
     --footer-background-color: #b5bbbf;
   }
@@ -38,10 +38,10 @@
     --header-background-color: #220f0f;
     --highlight-color: #ffffff;
     --featured-font-family: "Rubik Glitch", sans-serif;
-    --character-bottom-image-src: url("../images/characters/kids-on-the-bike.svg");
-    --character-bottom-image-color: rgba(255, 255, 255, 0.1);
-    --character-top-image-src: url("../images/characters/inverted-world-monster.svg");
-    --character-top-image-color: #000;
+    --character-bottom-image-src: url("../images/characters/kids-on-the-bike.png");
+    --character-bottom-image-color: rgb(255, 255, 255);
+    --character-top-image-src: url("../images/characters/inverted-world-monster.png");
+    --character-top-image-color: rgb(255, 255, 255);
     --background-lamp-image: url("../images/backgrounds/lamps-inverted.png");
     --footer-background-color: #000;
   }
@@ -139,6 +139,50 @@
 .world-characters#top-characters {
     width: 100%;
     background-color: var(--character-top-image-color);
-    mask: var(--character-top-image-src) bottom / contain no-repeat;
-    --webkit-mask: var(--character-top-image-src) bottom / contain no-repeat;
+    bottom: -3px;
+
+    mask: var(--character-top-image-src) bottom / 100% no-repeat;
+    --webkit-mask: var(--character-top-image-src) bottom / 100% no-repeat;
+}
+
+.world-characters#bottom-characters {
+  height: 500px;
+  background-color: var(--character-bottom-image-color);
+  top: 3px;
+  transform: rotateZ(180deg) scaleX(-1);
+  position: relative;
+
+  mask: var(--character-bottom-image-src) bottom / contain no-repeat;
+  --webkit-mask: var(--character-bottom-image-src) bottom / 100% no-repeat;
+}
+
+/*** MAIN STYLES ***/
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*** SECTION STYLES ***/
+section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 95px;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+#section-inverted-world {
+  align-items: center;
+}
+
+#section-inverted-world .section-texts {
+  width: 50%;
+}
+
+#section-inverted-world .section-texts h2 {
+  max-width: 300px;
 }
