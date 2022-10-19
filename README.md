@@ -7,8 +7,3 @@
 - HTML
 - CSS
 - JavaScript
-
-```
-<br/><br/>
-
-<br/><br/>
